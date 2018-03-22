@@ -57,3 +57,6 @@ Sara Cohen, Aviv Zohar
 
 Meiklejohn S, Pomarole M, Jordan G, et al. A fistful of bitcoins: characterizing payments among men with no names[C]// Conference on Internet Measurement Conference. ACM, 2013:127-140.
 
+
+Bitcoin's Security Model Revisited
+Yonatan Sompolinsky, Aviv Zohar
