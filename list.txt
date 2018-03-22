@@ -1,0 +1,44 @@
+Dinh, Tien Tuan Anh, et al. "Blockbench: A framework for analyzing private blockchains." Proceedings of the 2017 ACM International Conference on Management of Data. ACM, 2017.
+
+K. Croman, C. Decker, I. Eyal, A. E. Gencer, A. Juels,
+A. Kosba, A. Miller, P. Saxena, E. Shi, and E. G¨un.
+On scaling decentralized blockchains. In Proc. 3rd
+Workshop on Bitcoin and Blockchain Research, 2016.
+
+D. Ongaro and J. Ousterhout. In search of an
+understandable consensus algorithm. In USENIX
+ATC, 2014.
+
+
+CUB, a Consensus Unit-based Storage Scheme for Blockchain System（ICDE2018，没有原文）
+Zihuan XU (Hong Kong University of Science and Technology)
+Siyuan HAN (Hong Kong University of Science and Technology)
+Lei Chen (Hong Kong University of Science and Technology)
+
+
+Tutorial: Blockchains and Databases(VLDB2017), By C.Mohan from IBM
+https://www.facebook.com/notes/mohan-c-mohan/permissioned-blockchains-and-databases/10155027556287295
+
+McConaghy, Trent, et al. "BigchainDB: a scalable blockchain database." white paper, BigChainDB (2016).
+
+Gaetani, Edoardo, et al. "Blockchain-based database to ensure data integrity in cloud computing environments." (2017).
+
+Azaria, Asaph, et al. "Medrec: Using blockchain for medical data access and permission management." Open and Big Data (OBD), International Conference on. IEEE, 2016.
+
+
+S. Wang, T. T. A . Dinh, Q. Lin, Z. Xie, M. Zhang, Q. Cai, G. Chen, W. Fu, B.C. Ooi, P. Ruan: ForkBase: An Efficient Storage Engine for Blockchain and Forkable Applications. February 2018
+
+
+When the cookie meets the blockchain: Privacy risks of web payments via cryptocurrencies
+
+A. Miller, M. M?ser, K. Lee, and A. Narayanan, “An empirical analysis of linkability
+in the Monero blockchain,” arXiv preprint arXiv:1704.04299, 2017.
+M. M?ser and R. B?hme, “The price of anonymity: empirical evidence from a
+market for Bitcoin anonymization,” Journal of Cybersecurity, 2017.
+
+A fistful of Bitcoins: characterizing payments among men with no names   in International Conference
+on Applied Cryptography and Network Security. Springer, 2016,
+
+
+
+区块链的数据分析——为何不下下来分析呢？
