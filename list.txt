@@ -44,3 +44,16 @@ on Applied Cryptography and Network Security. Springer, 2016,
 区块链的数据分析——为何不下下来分析呢？
 
 Corda
+
+
+
+Toward Open Data Blockchain Analytics: A Bitcoin Perspective
+D. McGinn, D McIlwraith, Y.Guo
+
+
+Database Perspectives on Blockchains
+Sara Cohen, Aviv Zohar
+(Submitted on 15 Mar 2018)
+
+Meiklejohn S, Pomarole M, Jordan G, et al. A fistful of bitcoins: characterizing payments among men with no names[C]// Conference on Internet Measurement Conference. ACM, 2013:127-140.
+
