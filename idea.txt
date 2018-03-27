@@ -1,0 +1,3 @@
+append only database
+dont have to delete
+insert only at the end(timeline
