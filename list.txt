@@ -62,3 +62,12 @@ Meiklejohn S, Pomarole M, Jordan G, et al. A fistful of bitcoins: characterizing
 
 Bitcoin's Security Model Revisited
 Yonatan Sompolinsky, Aviv Zohar
+
+
+
+
+Yasin, Affan, and Lin Liu. "An online identity and smart contract management system." Computer Software and Applications Conference (COMPSAC), 2016 IEEE 40th Annual. Vol. 2. IEEE, 2016.
+
+The challenge of decentralized marketplaces arxiv
+
+Dynamic Distributed Storage for Scaling Blockchains arxiv
