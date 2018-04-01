@@ -71,3 +71,6 @@ Yasin, Affan, and Lin Liu. "An online identity and smart contract management sys
 The challenge of decentralized marketplaces arxiv
 
 Dynamic Distributed Storage for Scaling Blockchains arxiv
+
+
+New kids on the block: an analysis of modern blockchains
