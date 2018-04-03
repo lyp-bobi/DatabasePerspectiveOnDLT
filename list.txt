@@ -74,3 +74,8 @@ Dynamic Distributed Storage for Scaling Blockchains arxiv
 
 
 New kids on the block: an analysis of modern blockchains
+
+
+
+Bitcoin API£ºThis is a C++ wrapper library for JSON-RPC communication with the Bitcoin daemon. It allows developers to communicate with the Bitcoin daemon without the need to pack and unpack JSON-RPC messages and thus simplifies the interaction with it.
+https://github.com/hkalodner/bitcoin-api-cpp/tree/995357f62aa09d8abacf2bee6941b2a024272a34
