@@ -93,3 +93,6 @@ https://freedom-to-tinker.com/2015/09/18/private-blockchain-is-just-a-confusing-
 Blockchain vs. Centralized Database https://www.multichain.com/blog/2016/03/blockchains-vs-centralized-databases/
 
 How to TIme-Stamp a Digital Document， Stuart Haber(*a database that is hard to tamper and easier to audit*)
+
+传统数据库：写入，查询（要优化）
+Blockchain:写入（要优化），查询（要优化，要遮蔽）
