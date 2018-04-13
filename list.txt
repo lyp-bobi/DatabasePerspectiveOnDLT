@@ -83,3 +83,13 @@ https://github.com/hkalodner/bitcoin-api-cpp/tree/995357f62aa09d8abacf2bee6941b2
 
 J. Rubin, ¡°Bitcoin spark framework (btcspark),¡± https://github.com/JeremyRubin/
 BTCSpark.
+
+
+¡°Private blockchain¡± is just a confusing name for a shared database£¬ Arvind Narayanan£¬ AP of Princeton£¬ writer of "BlockSci"
+https://freedom-to-tinker.com/2015/09/18/private-blockchain-is-just-a-confusing-name-for-a-shared-database/
+
+"The use of these crypto techniques for building a tamper-resistant database has been known for 25 years. At first there wasn¡¯t much impetus for Wall Street to pay attention, but gradually there has arisen a great opportunity in moving some types of financial infrastructure to an automated, cryptographically secured model."
+
+Blockchain vs. Centralized Database https://www.multichain.com/blog/2016/03/blockchains-vs-centralized-databases/
+
+How to TIme-Stamp a Digital Document£¬ Stuart Haber(*a database that is hard to tamper and easier to audit*)
