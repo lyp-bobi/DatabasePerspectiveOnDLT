@@ -27,7 +27,7 @@ Gaetani, Edoardo, et al. "Blockchain-based database to ensure data integrity in 
 
 Azaria, Asaph, et al. "Medrec: Using blockchain for medical data access and permission management." Open and Big Data (OBD), International Conference on. IEEE, 2016.
 
-
+Zikratov, I.A., Kuzmin, A., Akimenko, V., Niculichev, V., & Yalansky, L. (2017). Ensuring data integrity using blockchain technology. 2017 20th Conference of Open Innovations Association (FRUCT), 534-539.
 S. Wang, T. T. A . Dinh, Q. Lin, Z. Xie, M. Zhang, Q. Cai, G. Chen, W. Fu, B.C. Ooi, P. Ruan: ForkBase: An Efficient Storage Engine for Blockchain and Forkable Applications. February 2018
 
 
@@ -96,3 +96,24 @@ How to TIme-Stamp a Digital Document， Stuart Haber(*a database that is hard to 
 
 传统数据库：写入，查询（要优化）
 Blockchain:写入（要优化），查询（要优化，要遮蔽）
+
+
+
+
+Taylor, M.B. (2013). Bitcoin and the age of Bespoke Silicon. 2013 International Conference on Compilers, Architecture and Synthesis for Embedded Systems (CASES), 1-10.
+
+Liang, X., Shetty, S., Tosh, D.K., Kamhoua, C.A., Kwiat, K.A., & Njilla, L. (2017). ProvChain: A Blockchain-Based Data Provenance Architecture in Cloud Environment with Enhanced Privacy and Availability. 2017 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID), 468-477.
+
+
+
+Dorri, A., Kanhere, S.S., Jurdak, R., & Gauravaram, P. (2017). Blockchain for IoT security and privacy: The case study of a smart home. 2017 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 618-623.
+
+
+Weaver: A High-Performance, Transactional Graph Database Based on Refinable Timestamps
+
+ piChain: When a Blockchain meets Paxos.
+
+Xu, X., Pautasso, C., Zhu, L., Gramoli, V., Ponomarev, A., Tran, A.B., & Chen, S. (2016). The Blockchain as a Software Connector. 2016 13th Working IEEE/IFIP Conference on Software Architecture (WICSA), 182-191.
+
+https://www.factom.com/products/harmony
+Harmony is a new blockchain base document technology that works with your existing imaging or document management solution to create a secure, transparent, unalterable record for the final loan documents. 

@@ -1,3 +1,10 @@
 append only database
 dont have to delete
 insert only at the end(timeline
+
+
+
+query on blockchain:
+by which user/contract
+time period
+type
