@@ -117,3 +117,8 @@ Xu, X., Pautasso, C., Zhu, L., Gramoli, V., Ponomarev, A., Tran, A.B., & Chen, S
 
 https://www.factom.com/products/harmony
 Harmony is a new blockchain base document technology that works with your existing imaging or document management solution to create a secure, transparent, unalterable record for the final loan documents. 
+
+
+
+https://www.rsk.co/
+RSK is the first open-source smart contract platform with a 2-way peg to Bitcoin that also rewards the Bitcoin miners via merge-mining, allowing them to actively participate in the Smart Contract revolution. RSK goal is to add value and functionality to the Bitcoin ecosystem by enabling smart-contracts, near instant payments and higher-scalability.
