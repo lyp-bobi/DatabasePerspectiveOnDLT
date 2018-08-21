@@ -1,0 +1,16 @@
+main quest
+1. machine learning
+  1.1. Neural Network: Tricks of the Trade
+  1.2. getting the data
+    1.2.1. sampler
+    1.2.2. sample
+2. blockchain
+  2.1. prepare a intro to the hyperledger+oracle work
+
+3. database
+  3.1. spark/scala
+  3.2. trajacy
+  3.3. 
+
+4. ab
+  4.1 mpi

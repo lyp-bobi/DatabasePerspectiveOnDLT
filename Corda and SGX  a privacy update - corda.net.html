@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- base href="https://www.corda.net/2017/06/corda-sgx-privacy-update/" --><style>body{margin-left:0;margin-right:0;margin-top:0}#bN015htcoyT__google-cache-hdr{background:#f5f5f5;font:13px arial,sans-serif;text-align:left;color:#202020;border:0;margin:0;border-bottom:1px solid #cecece;line-height:16px;padding:16px 28px 24px 28px}#bN015htcoyT__google-cache-hdr *{display:inline;font:inherit;text-align:inherit;color:inherit;line-height:inherit;background:none;border:0;margin:0;padding:0;letter-spacing:0}#bN015htcoyT__google-cache-hdr a{text-decoration:none;color:#1a0dab}#bN015htcoyT__google-cache-hdr a:hover{text-decoration:underline}#bN015htcoyT__google-cache-hdr a:visited{color:#609}#bN015htcoyT__google-cache-hdr div{display:block;margin-top:4px}#bN015htcoyT__google-cache-hdr b{font-weight:bold;display:inline-block;direction:ltr}</style><script src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/wp-emoji-release.js" type="text/javascript" defer="defer"></script></head><body class="post-template-default single single-post postid-1506 single-format-standard group-blog" data-rsssl="1"><div id="bN015htcoyT__google-cache-hdr"><div><span>This is Google's cache of <a href="https://www.corda.net/2017/06/corda-sgx-privacy-update/">https://www.corda.net/2017/06/corda-sgx-privacy-update/</a>.</span>&nbsp;<span>It is a snapshot of the page as it appeared on Jul 6, 2018 06:51:18 GMT.</span>&nbsp;<span>The <a href="https://www.corda.net/2017/06/corda-sgx-privacy-update/">current page</a> could have changed in the meantime.</span>&nbsp;<a href="http://support.google.com/websearch/bin/answer.py?hl=en&amp;p=cached&amp;answer=1687222" onclick="javascript:window.open('http://support.google.com/websearch/bin/answer.py?hl=en&amp;p=cached&amp;answer=1687222'); return false;"><span>Learn more</span>.</a></div><div><span>These search terms are highlighted:</span><span style="background:#ffff66;color:black;font-weight:bold">corda</span><span style="background:#a0ffff;color:black;font-weight:bold">spv</span></div><div><span style="display:inline-block;margin-top:8px;margin-right:104px;white-space:nowrap"><span style="margin-right:28px"><span style="font-weight:bold">Full version</span></span><span style="margin-right:28px"><a href="http://webcache.googleusercontent.com/search?q=cache:zBmu0QzcKXAJ:https://www.corda.net/2017/06/corda-sgx-privacy-update/+corda+spv&amp;num=1&amp;strip=1&amp;vwsrc=0"><span>Text-only version</span></a></span><span style="margin-right:28px"><a href="http://webcache.googleusercontent.com/search?q=cache:zBmu0QzcKXAJ:https://www.corda.net/2017/06/corda-sgx-privacy-update/+corda+spv&amp;num=1&amp;strip=0&amp;vwsrc=1"><span>View source</span></a></span></span></div><span style="display:inline-block;margin-top:8px;color:#717171"><span>Tip: To quickly find your search term on this page, press <b>Ctrl+F</b> or <b>⌘-F</b> (Mac) and use the find bar.</span></span></div><div style="position:relative;">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.corda.net/xmlrpc.php">
+<title>Corda and SGX: a privacy update - corda.net</title>
+<link rel="alternate" hreflang="en" href="https://www.corda.net/2017/06/corda-sgx-privacy-update/">
+<link rel="alternate" hreflang="ja" href="https://www.corda.net/ja/2017/06/corda-sgx-privacy-update/">
+<link rel="alternate" hreflang="zh-hant" href="https://www.corda.net/zh-hant/2017/06/corda-sgx-privacy-update/">
+
+<link rel="canonical" href="https://www.corda.net/2017/06/corda-sgx-privacy-update/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Corda and SGX: a privacy update - corda.net">
+<meta property="og:description" content="The following two tabs change content below.BioLatest Posts Mike Hearn Mike Hearn is a Lead Platform Engineer at R3. Before working on Corda, he was a Bitcoin developer and a senior software engineer at Google, where he worked on Maps, Earth, Gmail, bot detection and account security. Latest posts by Mike Hearn (see all) Speculation …">
+<meta property="og:url" content="https://www.corda.net/2017/06/corda-sgx-privacy-update/">
+<meta property="og:site_name" content="corda.net">
+<meta property="article:section" content="Blog">
+<meta property="article:published_time" content="2017-06-22T13:29:46+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="The following two tabs change content below.BioLatest Posts Mike Hearn Mike Hearn is a Lead Platform Engineer at R3. Before working on Corda, he was a Bitcoin developer and a senior software engineer at Google, where he worked on Maps, Earth, Gmail, bot detection and account security. Latest posts by Mike Hearn (see all) Speculation […]">
+<meta name="twitter:title" content="Corda and SGX: a privacy update - corda.net">
+<meta name="twitter:site" content="@r3cev">
+<meta name="twitter:creator" content="@r3cev">
+<script async="" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.corda.net\/","name":"corda.net","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.corda.net\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.corda.net\/2017\/06\/corda-sgx-privacy-update\/","sameAs":["https:\/\/twitter.com\/r3cev"],"@id":"#organization","name":"R3 Holdco LLC","logo":""}</script>
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="corda.net » Feed" href="https://www.corda.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="corda.net » Comments Feed" href="https://www.corda.net/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="corda.net » Corda and SGX: a privacy update Comments Feed" href="https://www.corda.net/2017/06/corda-sgx-privacy-update/feed/">
+
+<script type="text/javascript" data-cfasync="false">
+		var disableStr = 'ga-disable-UA-87760032-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-87760032-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+</script>
+
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.corda.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="dashicons-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/dashicons.css" type="text/css" media="all">
+<link rel="stylesheet" id="elusive-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/elusive.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="foundation-icons-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/foundation-icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="menu-icons-extra-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/extra.css" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-bootstrap-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="ts_fab_css-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/ts-fab.css" type="text/css" media="all">
+<link rel="stylesheet" id="github-embed-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/github-embed.css" type="text/css" media="all">
+<link rel="stylesheet" id="wonderplugin-slider-css-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/wonderpluginsliderengine.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpml-legacy-horizontal-list-0-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/style_004.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpml-menu-item-0-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="parent-style-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/style_003.css" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-style-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/style_002.css" type="text/css" media="all">
+<style id="sydney-style-inline-css" type="text/css">
+.site-header { background-color:rgba(0,0,0,0.9);}
+body, #mainnav ul ul a { font-family:Effra!important;}
+h1, h2, h3, h4, h5, h6, #mainnav ul li a, .portfolio-info, .roll-testimonials .name, .roll-team .team-content .name, .roll-team .team-item .team-pop .name, .roll-tabs .menu-tab li a, .roll-testimonials .name, .roll-project .project-filter li a, .roll-button, .roll-counter .name-count, .roll-counter .numb-count button, input[type="button"], input[type="reset"], input[type="submit"] { font-family:Effra;}
+.site-title { font-size:32px; }
+.site-description { font-size:16px; }
+#mainnav ul li a { font-size:18px; }
+h1 { font-size:30px; }
+h2 { font-size:28px; }
+h3 { font-size:26px; }
+h4 { font-size:22px; }
+h5 { font-size:17px; }
+h6 { font-size:22px; }
+body { font-size:16px; }
+.single .hentry .title-post { font-size:28px; }
+.header-image { background-size:cover;}
+.header-image { height:300px; }
+.widget-area .widget_fp_social a,#mainnav ul li a:hover, .sydney_contact_info_widget span, .roll-team .team-content .name,.roll-team .team-item .team-pop .team-social li:hover a,.roll-infomation li.address:before,.roll-infomation li.phone:before,.roll-infomation li.email:before,.roll-testimonials .name,.roll-button.border,.roll-button:hover,.roll-icon-list .icon i,.roll-icon-list .content h3 a:hover,.roll-icon-box.white .content h3 a,.roll-icon-box .icon i,.roll-icon-box .content h3 a:hover,.switcher-container .switcher-icon a:focus,.go-top:hover,.hentry .meta-post a:hover,#mainnav > ul > li > a.active, #mainnav > ul > li > a:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .text-color, .social-menu-widget a, .social-menu-widget a:hover, .archive .team-social li a, a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,.classic-alt .meta-post a,.single .hentry .meta-post a { color:#ec1d24}
+.reply,.woocommerce div.product .woocommerce-tabs ul.tabs li.active,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.project-filter li a.active, .project-filter li a:hover,.preloader .pre-bounce1, .preloader .pre-bounce2,.roll-team .team-item .team-pop,.roll-progress .progress-animate,.roll-socials li a:hover,.roll-project .project-item .project-pop,.roll-project .project-filter li.active,.roll-project .project-filter li:hover,.roll-button.light:hover,.roll-button.border:hover,.roll-button,.roll-icon-box.white .icon,.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span,.go-top,.bottom .socials li:hover a,.sidebar .widget:before,.blog-pagination ul li.active,.blog-pagination ul li:hover a,.content-area .hentry:after,.text-slider .maintitle:after,.error-wrap #search-submit:hover,#mainnav .sub-menu li:hover > a,#mainnav ul li ul:after, button, input[type="button"], input[type="reset"], input[type="submit"], .panel-grid-cell .widget-title:after { background-color:#ec1d24}
+.roll-socials li a:hover,.roll-socials li a,.roll-button.light:hover,.roll-button.border,.roll-button,.roll-icon-list .icon,.roll-icon-box .icon,.owl-theme .owl-controls .owl-page span,.comment .comment-detail,.widget-tags .tag-list a:hover,.blog-pagination ul li,.hentry blockquote,.error-wrap #search-submit:hover,textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus, button, input[type="button"], input[type="reset"], input[type="submit"], .archive .team-social li a { border-color:#ec1d24}
+.site-header.float-header { background-color:rgba(0,0,0,0.9);}
+@media only screen and (max-width: 1024px) { .site-header { background-color:#000000;}}
+.site-title a, .site-title a:hover { color:#ffffff}
+.site-description { color:#ffffff}
+#mainnav ul li a, #mainnav ul li::before { color:#ffffff}
+#mainnav .sub-menu li a { color:#ffffff}
+#mainnav .sub-menu li a { background:#1c1c1c}
+.text-slider .maintitle, .text-slider .subtitle { color:#ffffff}
+body { color:#47425d}
+#secondary { background-color:#ffffff}
+#secondary, #secondary a, #secondary .widget-title { color:#767676}
+.footer-widgets { background-color:#252525}
+.btn-menu { color:#ffffff}
+#mainnav ul li a:hover { color:#d65050}
+.site-footer { background-color:#1c1c1c}
+.site-footer,.site-footer a { color:#666666}
+.overlay { background-color:#000000}
+.page-wrap { padding-top:83px;}
+.page-wrap { padding-bottom:100px;}
+@media only screen and (max-width: 1025px) {		
+			.mobile-slide {
+				display: block;
+			}
+			.slide-item {
+				background-image: none !important;
+			}
+			.header-slider {
+			}
+			.slide-item {
+				height: auto !important;
+			}
+			.slide-inner {
+				min-height: initial;
+			} 
+		}
+@media only screen and (max-width: 780px) { 
+    	h1 { font-size: 32px;}
+		h2 { font-size: 28px;}
+		h3 { font-size: 22px;}
+		h4 { font-size: 18px;}
+		h5 { font-size: 16px;}
+		h6 { font-size: 14px;}
+    }
+
+</style>
+<link rel="stylesheet" id="sydney-fonts-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/css.html" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-font-awesome-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/font-awesome_002.css" type="text/css" media="all">
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='sydney-ie9-css'  href='https://www.corda.net/wp-content/themes/sydney/css/ie9.css?ver=4.9.4' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="mc4wp-form-themes-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/form-themes.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpm-styles-css" href="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/wp-meetup.css" type="text/css" media="all">
+<script>
+                if (document.location.protocol != "https:") {
+                    document.location = document.URL.replace(/^http:/i, "https:");
+                }
+            </script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"false","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls,dmg","inbound_paths":"","home_url":"https:\/\/www.corda.net","track_download_as":"event","internal_label":"int","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/frontend.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/jquery_002.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/ts-fab.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/wonderpluginsliderskins.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/wonderpluginslider.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"en_US":"https:\/\/www.corda.net\/2017\/06\/corda-sgx-privacy-update\/","en":"https:\/\/www.corda.net\/2017\/06\/corda-sgx-privacy-update\/","US":"https:\/\/www.corda.net\/2017\/06\/corda-sgx-privacy-update\/","ja":"https:\/\/www.corda.net\/ja\/2017\/06\/corda-sgx-privacy-update\/","zh_TW":"https:\/\/www.corda.net\/zh-hant\/2017\/06\/corda-sgx-privacy-update\/","zh":"https:\/\/www.corda.net\/zh-hant\/2017\/06\/corda-sgx-privacy-update\/","TW":"https:\/\/www.corda.net\/zh-hant\/2017\/06\/corda-sgx-privacy-update\/","zh-hant":"https:\/\/www.corda.net\/zh-hant\/2017\/06\/corda-sgx-privacy-update\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.corda.net","path":"\/","expiration":24}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/browser-redirect.js"></script>
+<link rel="https://api.w.org/" href="https://www.corda.net/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.corda.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.corda.net/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 4.9.4">
+<link rel="shortlink" href="https://www.corda.net/?p=1506">
+<link rel="alternate" type="application/json+oembed" href="https://www.corda.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.corda.net%2F2017%2F06%2Fcorda-sgx-privacy-update%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.corda.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.corda.net%2F2017%2F06%2Fcorda-sgx-privacy-update%2F&amp;format=xml">
+<style>
+	.ts-fab-list li a { background-color: #e9e9e9; border: 1px solid #e9e9e9; color: #333; }
+	.ts-fab-list li.active a { background-color: #333; border: 1px solid #333; color: #fff; }
+	.ts-fab-tab { background-color: #ffffff; border: 2px solid #333; color: #777; }
+	</style>
+
+<script type="text/javascript">//<![CDATA[
+	function external_links_in_new_windows_loop() {
+		if (!document.links) {
+			document.links = document.getElementsByTagName('a');
+		}
+		var change_link = false;
+		var force = '';
+		var ignore = 'downloads.corda.net';
+
+		for (var t=0; t<document.links.length; t++) {
+			var all_links = document.links[t];
+			change_link = false;
+			
+			if(document.links[t].hasAttribute('onClick') == false) {
+				// forced if the address starts with http (or also https), but does not link to the current domain
+				if(all_links.href.search(/^http/) != -1 && all_links.href.search('www.corda.net') == -1) {
+					// alert('Changeda '+all_links.href);
+					change_link = true;
+				}
+					
+				if(force != '' && all_links.href.search(force) != -1) {
+					// forced
+					// alert('force '+all_links.href);
+					change_link = true;
+				}
+				
+				if(ignore != '' && all_links.href.search(ignore) != -1) {
+					// alert('ignore '+all_links.href);
+					// ignored
+					change_link = false;
+				}
+
+				if(change_link == true) {
+					// alert('Changed '+all_links.href);
+					document.links[t].setAttribute('onClick', 'javascript:window.open(\''+all_links.href+'\'); return false;');
+					document.links[t].removeAttribute('target');
+				}
+			}
+		}
+	}
+	
+	// Load
+	function external_links_in_new_windows_load(func)
+	{	
+		var oldonload = window.onload;
+		if (typeof window.onload != 'function'){
+			window.onload = func;
+		} else {
+			window.onload = function(){
+				oldonload();
+				func();
+			}
+		}
+	}
+
+	external_links_in_new_windows_load(external_links_in_new_windows_loop);
+	//]]></script>
+<meta name="generator" content="WPML ver:3.7.0 stt:62,1,28;">
+<link rel="icon" href="https://www.corda.net/wp-content/uploads/2016/11/cropped-favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.corda.net/wp-content/uploads/2016/11/cropped-favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.corda.net/wp-content/uploads/2016/11/cropped-favicon-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.corda.net/wp-content/uploads/2016/11/cropped-favicon-270x270.png">
+<style type="text/css" id="wp-custom-css">
+			/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+
+article.category-blog div {
+  padding-bottom: 0.8em;
+}		</style>
+
+
+<div class="preloader">
+<div class="spinner">
+<div class="pre-bounce1"></div>
+<div class="pre-bounce2"></div>
+</div>
+</div>
+<div id="page" class="hfeed site">
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<div class="header-clone"></div>
+<header id="masthead" class="site-header" role="banner">
+<div class="header-wrap">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-8 col-xs-12">
+<a href="https://www.corda.net/" title="corda.net"><img class="site-logo" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/fg002_corda_w3.png" alt="corda.net"></a>
+</div>
+<div class="col-md-8 col-sm-4 col-xs-12">
+<div class="btn-menu"></div>
+<nav id="mainnav" class="mainnav" role="navigation">
+<div class="menu-navigation-container"><ul id="menu-navigation" class="menu"><li id="menu-item-1251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1251"><a href="https://www.corda.net/introduction">Discover</a>
+<ul class="sub-menu">
+<li id="menu-item-1252" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1252"><a href="https://www.corda.net/introduction"><i class="_mi _before dashicons dashicons-admin-page" aria-hidden="true"></i><span>Introduction</span></a></li>
+<li id="menu-item-2380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2380"><a href="http://explore.corda.zone/" onclick="javascript:window.open('http://explore.corda.zone/'); return false;"><i class="_mi _before dashicons dashicons-format-links" aria-hidden="true"></i><span>Explore Solutions</span></a></li>
+<li id="menu-item-803" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-803"><a href="https://www.corda.net/downloads/"><i class="_mi _before dashicons dashicons-download" aria-hidden="true"></i><span>Downloads</span></a></li>
+<li id="menu-item-2119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2119"><a href="https://www.youtube.com/channel/UCoOuUZatvIC1U65OisCrIKg" onclick="javascript:window.open('https://www.youtube.com/channel/UCoOuUZatvIC1U65OisCrIKg'); return false;"><i class="_mi _before dashicons dashicons-format-video" aria-hidden="true"></i><span>YouTube</span></a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38"><a href="https://www.corda.net/develop">Develop</a>
+<ul class="sub-menu">
+<li id="menu-item-551" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-551"><a href="https://docs.corda.net/" onclick="javascript:window.open('https://docs.corda.net/'); return false;"><i class="_mi _before dashicons dashicons-book" aria-hidden="true"></i><span>Docs</span></a></li>
+<li id="menu-item-2073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2073"><a href="https://www.corda.net/samples/"><i class="_mi _before fa fa-code" aria-hidden="true"></i><span>Code</span></a></li>
+<li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="https://www.corda.net/corda-training/"><i class="_mi _before dashicons dashicons-welcome-learn-more" aria-hidden="true"></i><span>Training</span></a></li>
+<li id="menu-item-1599" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1599"><a href="https://www.corda.net/support/"><i class="_mi _before genericon genericon-help" aria-hidden="true"></i><span>Support</span></a></li>
+</ul>
+</li>
+<li id="menu-item-165" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-165"><a href="https://www.corda.net/community/">Community</a>
+<ul class="sub-menu">
+<li id="menu-item-2775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2775"><a href="https://www.corda.net/mailing-lists/"><i class="_mi _before fa fa-envelope" aria-hidden="true"></i><span>Mailing lists</span></a></li>
+<li id="menu-item-1652" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1652"><a href="https://stackoverflow.com/questions/tagged/corda" onclick="javascript:window.open('https://stackoverflow.com/questions/tagged/corda'); return false;"><i class="_mi _before fa fa-stack-overflow" aria-hidden="true"></i><span>S. Overflow</span></a></li>
+<li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><a href="https://slack.corda.net/" onclick="javascript:window.open('https://slack.corda.net/'); return false;"><i class="_mi _before fa fa-slack" aria-hidden="true"></i><span>Slack</span></a></li>
+<li id="menu-item-509" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-509"><a href="https://meetup.com/pro/corda/" onclick="javascript:window.open('https://meetup.com/pro/corda/'); return false;"><i class="_mi _before fa fa-group" aria-hidden="true"></i><span>Meetups</span></a></li>
+<li id="menu-item-2556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2556"><a href="https://www.corda.net/support/technical-office-hours/"><i class="_mi _before dashicons dashicons-format-chat" aria-hidden="true"></i><span>Office Hours</span></a></li>
+<li id="menu-item-2687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2687"><a href="https://twitter.com/cordablockchain" onclick="javascript:window.open('https://twitter.com/cordablockchain'); return false;"><i class="_mi _before fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+</ul>
+</li>
+<li id="menu-item-2147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2147"><a href="https://medium.com/corda" onclick="javascript:window.open('https://medium.com/corda'); return false;">Blog</a></li>
+<li id="menu-item-wpml-ls-4-en" class="menu-item menu-item-has-children wpml-ls-slot-4 wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-menu-item wpml-ls-first-item menu-item-wpml-ls-4-en"><a title="English" href="https://www.corda.net/2017/06/corda-sgx-privacy-update/"><img class="wpml-ls-flag" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/en.png" alt="en" title="English"><span class="wpml-ls-native">English</span></a>
+<ul class="sub-menu">
+<li id="menu-item-wpml-ls-4-ja" class="menu-item wpml-ls-slot-4 wpml-ls-item wpml-ls-item-ja wpml-ls-menu-item menu-item-wpml-ls-4-ja"><a title="日本語" href="https://www.corda.net/ja/2017/06/corda-sgx-privacy-update/"><img class="wpml-ls-flag" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/ja.png" alt="ja" title="日本語"><span class="wpml-ls-native">日本語</span></a></li>
+<li id="menu-item-wpml-ls-4-zh-hant" class="menu-item wpml-ls-slot-4 wpml-ls-item wpml-ls-item-zh-hant wpml-ls-menu-item wpml-ls-last-item menu-item-wpml-ls-4-zh-hant"><a title="繁體中文" href="https://www.corda.net/zh-hant/2017/06/corda-sgx-privacy-update/"><img class="wpml-ls-flag" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/zh-hant.png" alt="zh-hant" title="繁體中文"><span class="wpml-ls-native">繁體中文</span></a></li>
+</ul>
+</li>
+</ul></div> </nav>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="sydney-hero-area">
+<div class="header-image">
+<div class="overlay"></div>
+<img class="header-inner" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/header.jpg" alt="corda.net" title="corda.net" width="1920">
+&lt;
+</div>
+</div>
+<div id="content" class="page-wrap">
+<div class="container content-wrapper">
+<div class="row">
+<div id="primary" class="content-area col-md-9 ">
+<main id="main" class="post-wrap" role="main">
+<article id="post-1506" class="post-1506 post type-post status-publish format-standard hentry category-blog">
+<header class="entry-header">
+<div class="meta-post">
+<a href="https://www.corda.net/category/blog/" title="Blog" class="post-cat">Blog</a> </div>
+<h1 class="title-post entry-title"><b style="color:black;background-color:#ffff66">Corda</b> and SGX: a privacy update</h1>
+<div class="single-meta">
+<span class="posted-on">Posted <a href="https://www.corda.net/2017/06/corda-sgx-privacy-update/" rel="bookmark"><time class="entry-date published updated" datetime="2017-06-22T13:29:46+00:00">22/06/2017</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://www.corda.net/author/mike/">Mike Hearn</a></span></span> </div>
+</header>
+<div class="entry-content">
+<div id="ts-fab-above" class="ts-fab-wrapper"><span class="screen-reader-text">The following two tabs change content below.</span><ul class="ts-fab-list"><li class="ts-fab-bio-link"><a href="#ts-fab-bio-above">Bio</a></li><li class="ts-fab-latest-posts-link"><a href="#ts-fab-latest-posts-above">Latest Posts</a></li></ul><div class="ts-fab-tabs">
+<div class="ts-fab-tab" id="ts-fab-bio-above">
+<div class="ts-fab-avatar"><img alt="" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/37009f643668522f49fb2173fa9443b2.jpg" srcset="https://secure.gravatar.com/avatar/37009f643668522f49fb2173fa9443b2?s=160&amp;d=mm&amp;r=x 2x" class="avatar avatar-80 photo" width="80" height="80"><div class="ts-fab-social-links"></div>
+</div>
+<div class="ts-fab-text">
+<div class="ts-fab-header"><h4>Mike Hearn</h4></div>
+<div class="ts-fab-content">Mike Hearn is a Lead Platform Engineer at R3. Before working on <b style="color:black;background-color:#ffff66">Corda</b>,
+ he was a Bitcoin developer and a senior software engineer at Google, 
+where he worked on Maps, Earth, Gmail, bot detection and account 
+security.</div>
+</div>
+</div>
+<div class="ts-fab-tab" id="ts-fab-latest-posts-above">
+<div class="ts-fab-avatar"><img alt="" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/37009f643668522f49fb2173fa9443b2.jpg" srcset="https://secure.gravatar.com/avatar/37009f643668522f49fb2173fa9443b2?s=160&amp;d=mm&amp;r=x 2x" class="avatar avatar-80 photo" width="80" height="80"><div class="ts-fab-social-links"></div>
+</div>
+<div class="ts-fab-text">
+<div class="ts-fab-header">
+<h4>Latest posts by Mike Hearn <span class="latest-see-all">(<a href="https://www.corda.net/author/mike/" rel="nofollow">see all</a>)</span></h4>
+</div>
+<ul class="ts-fab-latest">
+<li>
+<a href="https://www.corda.net/2018/01/speculation-based-side-channel-attacks/">Speculation based side channel attacks</a><span> - 19/01/2018</span>
+</li>
+<li>
+<a href="https://www.corda.net/2017/09/certificate-revocation-expiry/">Certificate revocation and expiry</a><span> - 20/09/2017</span>
+</li>
+<li>
+<a href="https://www.corda.net/2017/08/compatibility-and-upgrades/">Compatibility and upgrades</a><span> - 08/08/2017</span>
+</li>
+</ul></div>
+</div>
+</div>
+</div><p>In this technical update I want to share something a little bit special – a privacy upgrade to <b style="color:black;background-color:#ffff66">Corda</b> based on Intel’s Software Guard Extensions technology (SGX).&nbsp;We first talked about this last year in our technical <a href="https://docs.corda.net/_static/corda-technical-whitepaper.pdf" onclick="javascript:window.open('https://docs.corda.net/_static/corda-technical-whitepaper.pdf'); return false;">whitepaper</a> (p51) and now is the time to provide the technical community with more information on where we’re heading.</p>
+<p>&nbsp;</p>
+<h1>What is SGX?</h1>
+<p>Modern Intel CPUs (Skylake+) have a new instruction set that allows software to compute on private, encrypted data&nbsp;<em>without</em>
+ revealing that data to the owner of the hardware. You can send someone 
+data you don’t want them to see, they can run a computation on that 
+data, and they obtain only the result but not the inputs. In this way it
+ is like a hardware implemented form of multi-party computation or zero 
+knowledge proof, with many of the same uses.</p>
+<p>For the last year and a half we’ve been engaged in a research project exploring the integration of SGX with <b style="color:black;background-color:#ffff66">Corda</b>.
+ We’ve now progressed far enough that it’s time to talk about what we’re
+ doing, and we think this work will resolve concerns about ledger 
+privacy (like those recently <a href="https://www.theregister.co.uk/2017/06/01/bank_of_canada_finds_flaws_with_current_blockchain_solutions/" onclick="javascript:window.open('https://www.theregister.co.uk/2017/06/01/bank_of_canada_finds_flaws_with_current_blockchain_solutions/'); return false;">raised by the Bank of Canada</a>).</p>
+<p>&nbsp;</p>
+<h1>Why use SGX?</h1>
+<p>Right back to the earliest days of Bitcoin, one of the biggest 
+concerns about blockchain based systems has always been privacy. The 
+desire for business confidentiality exists at all levels of the formal 
+financial system and is in fact frequently demanded by regulators, 
+contrary to their reputation in the cryptocurrency 
+community!&nbsp;Therefore privacy has been a focus of Corda’s design 
+right from the start.</p>
+<p>A few eyebrows went up when we released our <a href="https://docs.corda.net/_static/corda-technical-whitepaper.pdf" onclick="javascript:window.open('https://docs.corda.net/_static/corda-technical-whitepaper.pdf'); return false;">technical white paper</a>&nbsp;last year, along with <a href="https://github.com/corda/corda" onclick="javascript:window.open('https://github.com/corda/corda'); return false;">open source code</a>. Despite being heavily inspired by Bitcoin in many technical respects, <b style="color:black;background-color:#ffff66">Corda</b>
+ differed in one key way – it doesn’t organise the timeline into a chain
+ of blocks! Instead, double spend resolution occurs at the individual 
+transaction level by coalitions of nodes called ‘notaries’ (these are 
+the <b style="color:black;background-color:#ffff66">Corda</b> equivalent of miners).</p>
+<p>This design allowed us to make our first big privacy improvement over
+ traditional block chains – transactions don’t get broadcast to everyone
+ on the network. Instead they only go where you need them to go. This 
+yields a form of partial ledger visibility in which regular participants
+ don’t see the whole thing, even though it’s globally consistent[2]. We 
+added on top Bitcoin-style key rotation with automatic identity 
+management to de/anonymise transactions automatically, transactions 
+structured in a Merkle tree so some parts can be revealed without the 
+rest, and full encryption of the peer to peer network [1].</p>
+<p>This was good. But we knew we could do even better.</p>
+<p>The innocuous phrase “where you need transactions to go” in my 
+paragraph above doesn’t mean transactions are only seen by involved 
+counterparties, even though that would be intuitive to people who aren’t
+ experienced with block chains. To verify the integrity of a change to 
+the ledger, the history of that part of the ledger must still be 
+downloaded and audited. If that wasn’t the case then <b style="color:black;background-color:#ffff66">Corda</b>
+ would just be a messaging network and a payment “transaction” would be 
+little more than an IOU. It’s the ability to verify the history of an 
+asset, deal, or any other piece of data that makes <b style="color:black;background-color:#ffff66">Corda</b> a&nbsp;distributed ledger. So, if Alice sends Bob $100, then in the <b style="color:black;background-color:#ffff66">Corda</b>
+ protocol Alice must also send Bob the chain of custody leading up to 
+that transfer all the way back to the initial issuance. This is clearly 
+better than a model where everyone tells everyone else about every 
+transaction ahead of time. That’s especially true for a ledger like 
+ours, where many use cases result in small transaction graphs that don’t
+ circulate widely. But it doesn’t match what you intuitively want – only
+ participants can see a transaction, yet those participants can also be 
+sure they’re not being ripped off with funny money.&nbsp;This is an 
+unavoidable tradeoff with standard technology.</p>
+<p><b style="color:black;background-color:#ffff66">Corda</b> calls the process of asking a peer for transaction histories and verifying the results&nbsp;<em>resolution</em>. By putting the resolution process inside an SGX&nbsp;<em>enclave</em>
+ – an encrypted tamper resistant memory space – it becomes possible to 
+fully encrypt the ledger such that nobody has access to data they aren’t
+ supposed to.</p>
+<p>&nbsp;</p>
+<h1>What’s been done?</h1>
+<p>It’s easier to say “just resolve transactions in an enclave” than 
+actually do it. There are many interesting problems to solve along the 
+way.</p>
+<p>The first issue is that verifying transactions involves executing 
+their smart contract logic. This logic must be prevented from tampering 
+with the platform code doing the verification itself, so it must be 
+sandboxed. <b style="color:black;background-color:#ffff66">Corda</b> 
+uses a modified and restricted Java Virtual Machine to do this – whilst 
+it is conventional in the block chain space to roll your own VM, we 
+decided early on that it was better to adapt what already existed than 
+start a new toolchain from scratch. I note that <a href="https://github.com/bnjbvr/ethereum-wasm-design/blob/master/rationale.md" onclick="javascript:window.open('https://github.com/bnjbvr/ethereum-wasm-design/blob/master/rationale.md'); return false;">Ethereum is looking at using a restricted WebA\ssembly VM</a> in future, so the move towards non-blockchain specific VMs is spreading.</p>
+<p>Inside an SGX enclave there is no operating system access: you can’t 
+make system calls to the kernel, and you can’t dynamically link against 
+anything. An enclave is a statically linked piece of code that’s loaded 
+into memory using special CPU instructions that hash the signed code 
+image. Additional CPU instructions allow you to enter and exit the 
+enclave, as well as derive private keys that aren’t accessible outside 
+the enclave and generate ‘remote attestations’ that allow a third party 
+to verify the hash of the code that was loaded.</p>
+<p>Typical JVMs do not expect to run in this sort of environment and 
+thus cannot be used out of the box. We produced a modified version of 
+the Avian JVM along with a tiny operating system, called StubbyOS, that 
+provides enough functionality for <b style="color:black;background-color:#ffff66">Corda</b> transaction resolution to run. We then embedded it inside an enclave and showed that it could load and verify <b style="color:black;background-color:#ffff66">Corda</b>
+ cash transactions, with smart contract execution as well. StubbyOS 
+provides its own memory management, dynamic linking, support for 
+multi-threading (as you cannot start threads inside the enclave) and a 
+few more things. The JVM itself has a JIT compiler and compacting 
+garbage collector, and can run ordinary Java 8 code.</p>
+<p>Running a JVM inside an SGX enclave is an unusual move. Normally 
+you’d try and minimise the amount of code inside an enclave, to reduce 
+the risk of it being hacked. &nbsp;For enclaves written in C or C++ that
+ is indeed a wise strategy. But another way to reduce the risk of 
+hacking is to write your code in a managed language that eliminates 
+typical native code exploits by design. The act of loading, parsing and 
+verifying a <b style="color:black;background-color:#ffff66">Corda</b> 
+transaction is a complex operation that involves carefully working with 
+data that may be malicious. It helps a lot to have a bounds-checked 
+language with managed memory.</p>
+<p>In addition, Java was designed from the start for sandboxing of code.
+ We’re not using an applet-style sandbox for this project because we 
+wish to enforce deterministic execution[3] and because we want something
+ stronger than typical sandboxes provide. Instead we use static 
+analysis, code rewriting and a massively reduced standard library to 
+prevent smart contracts from doing things they aren’t supposed to. 
+Despite this alternative approach, Java’s bytecode verification system 
+still does much of the heavy lifting.</p>
+<p>&nbsp;</p>
+<h1>What is remote attestation?</h1>
+<p>A key part of the scheme is how we use remote attestation. RA allows 
+an SGX CPU to produce a so-called “report”: a data structure signed by 
+the CPU indicating the contents of the enclave. Whilst the enclave code 
+itself cannot have any secrets when it’s loaded, by deterministically 
+deriving a private key inside the enclave (which is unavailable to the 
+host operating system or owner of the hardware) it becomes possible to 
+put the public part into the report and thus establish encrypted 
+communication with an enclave. It is also possible to encrypt data for 
+local storage this way (this is called “sealing”).</p>
+<p>By having <b style="color:black;background-color:#ffff66">Corda</b> nodes remotely attest to each other, the following features become possible:</p>
+<ul>
+<li>Nodes can reveal transaction data to each other without compromising privacy.</li>
+<li>“Light” nodes can request a remote attestation from a fully 
+verifying node and rely on them to check the transactions. This is 
+analogous to Bitcoin’s “<b style="color:black;background-color:#a0ffff">SPV</b>
+ mode” where the acceptance of miners is used as a signal of transaction
+ validity. The relying device does not need to have SGX; it could be a 
+mobile phone.</li>
+<li>Proxy oracles like the IC3 <a href="https://eprint.iacr.org/2016/168.pdf" onclick="javascript:window.open('https://eprint.iacr.org/2016/168.pdf'); return false;">Town Crier experiment</a> can be brought to <b style="color:black;background-color:#ffff66">Corda</b>. Proxy oracles (oracles that download the underlying data from an uncooperative third party) are not so useful in <b style="color:black;background-color:#ffff66">Corda</b> where financial institutions tend to be directly involved, but they could still be applicable in a few cases.</li>
+</ul>
+<p>SGX also has applicability for doing multi-party computations in 
+cases where cryptographic approaches can’t be used, and for protection 
+of private keys without the need for expensive HSMs.</p>
+<p>&nbsp;</p>
+<h1>How does this compare to zero knowledge proofs?</h1>
+<p>I like zero knowledge proofs a lot. The progress in this space in recent years has been phenomenal. I have no doubt that <b style="color:black;background-color:#ffff66">Corda</b>
+ will be using various kinds of general zero knowledge proof in future. 
+But there’s a lot of work needed to get the industry to that point, for 
+the following reasons:</p>
+<ol>
+<li>The only ledgers today that use zero knowledge proofs are all 
+ledgers for coins. They aren’t capable of doing any kind of smart 
+contract because the proof circuit has to be artisanally hand crafted by
+ expert cryptographers. But the use cases financial firms are most 
+interested in almost invariably do not involve coins, and require 
+complex smart contract logic written by experts in finance, not 
+cryptography. So there’s a basic incompatibility there. Research efforts
+ like MSR Gepetto and vnTinyRAM showed that it’s possible to take 
+ordinary imperative code as found in <b style="color:black;background-color:#ffff66">Corda</b>
+ contracts and compile it to ZKPs automatically, but only at a severe 
+performance penalty. We have some plans for a way forward here that we 
+may talk about in the future.</li>
+<li>The best known (within the blockchain community) ZKP protocol today is the zkSNARK algorithm&nbsp;<a href="https://github.com/scipr-lab/libsnark" onclick="javascript:window.open('https://github.com/scipr-lab/libsnark'); return false;">implemented by SCIPR Lab</a>,
+ which has a back door problem – the scheme must be initialised in such a
+ way that the people doing the initialisation could potentially cheat 
+and gain the ability to forge proofs. A new construct (the so-called 
+zkSTARK) solves this problem, but it’s very new cryptography and will 
+take time to fully develop.</li>
+</ol>
+<p>For these reasons, we chose to go with SGX. SGX can be made largely 
+transparent to app developers who do not have to learn any new 
+specialised skills, it does not impose severe performance penalties, and
+ in the intended non-light deployment mode a failure of the technology 
+compromises privacy but not integrity. It satisfies more use cases than 
+cryptography alone is presently capable of and is easy to work with. 
+Even in a Star Trek future where zero knowledge proofs are an 
+unremarkable part of everyday financial life, we anticipate that SGX 
+will still play an important role.</p>
+<p>&nbsp;</p>
+<h1>What comes next?</h1>
+<p>I wanted to share this update with both the <b style="color:black;background-color:#ffff66">Corda</b>
+ community and the wider cryptographic research community, because we’re
+ frequently asked about privacy related topics and felt it was time to 
+share our plans. Our research has progressed to the point where we feel 
+confident it can be integrated, although there is still much work 
+remaining. If you’re interested in systems engineering or cryptography, <a href="https://jobs.lever.co/r3cev.com" onclick="javascript:window.open('https://jobs.lever.co/r3cev.com'); return false;">we are hiring</a>.</p>
+<p>&nbsp;</p>
+<p>[1] I’ve found many people think Bitcoin and Ethereum are encrypted 
+networks, but they aren’t. Nothing in Bitcoin or Ethereum is encrypted. 
+It must be that way because these are public broadcast networks that 
+anyone can join, so encrypting ledger data would be pointless. The word 
+“cryptocurrency” comes from the cryptography of digital signatures and 
+hash functions: there’s more to crypto than hiding messages.</p>
+<p>[2] Special nodes such as regulator, depository and fully validating 
+notary nodes may still see large parts of the ledger, or all of it, 
+depending on deployment model.</p>
+<p>[3] See section 13 of the tech white paper for details on how we do this.</p>
+</div>
+<footer class="entry-footer">
+</footer>
+</article>
+<nav class="navigation post-navigation" role="navigation">
+<h2 class="screen-reader-text">Post navigation</h2>
+<div class="nav-links clearfix">
+<div class="nav-previous"><span>⟵</span><a href="https://www.corda.net/2017/06/corda-sql-nosql/" rel="prev"><b style="color:black;background-color:#ffff66">Corda</b>, SQL and NoSQL</a></div><div class="nav-next"><a href="https://www.corda.net/2017/06/r3-four-banks-test-euro-commercial-paper-issuance-corda-dlt-platform/" rel="next">R3 and four banks test Euro Commercial Paper issuance on <b style="color:black;background-color:#ffff66">Corda</b> DLT platform</a><span>⟶</span></div> </div>
+</nav>
+<div id="comments" class="comments-area">
+<div class="respond comment-respond">
+<h3 id="reply-title" class="comment-reply-title">
+Start the discussion at <a href="http://discourse.corda.net/t/corda-and-sgx-a-privacy-update/1259" onclick="javascript:window.open('http://discourse.corda.net/t/corda-and-sgx-a-privacy-update/1259'); return false;">
+discourse.<b style="color:black;background-color:#ffff66">corda</b>.net
+</a></h3>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+<a class="go-top"><i class="fa fa-angle-up"></i></a>
+<footer id="colophon" class="site-footer" role="contentinfo">
+<div class="site-info container">
+<a href="https://www.corda.net/">Copyright 2015 © NYC TECH CLUB</a>
+</div>
+</footer>
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var discourse = {"url":"http:\/\/discourse.corda.net"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/comments.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/scripts.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/main.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/comment-reply.js"></script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/wp-embed.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var icl_vars = {"current_language":"en","icl_home":"https:\/\/www.corda.net\/","ajax_url":"https:\/\/www.corda.net\/wp-admin\/admin-ajax.php","url_type":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Corda%20and%20SGX%20%20a%20privacy%20update%20-%20corda.net_files/sitepress.js"></script>
+
+
+</div></body></html>
